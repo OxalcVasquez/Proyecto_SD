@@ -23,6 +23,8 @@ Partial Class frm_alumno
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lbl_codigo = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cbo_semestre = New System.Windows.Forms.ComboBox()
         Me.dtp_fecnac = New System.Windows.Forms.DateTimePicker()
@@ -45,12 +47,18 @@ Partial Class frm_alumno
         Me.txt_consulta = New System.Windows.Forms.TextBox()
         Me.dgv_alumnos = New System.Windows.Forms.DataGridView()
         Me.btn_cancelar = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.cbo_escuela = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgv_alumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cbo_escuela)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.lbl_codigo)
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.cbo_semestre)
         Me.GroupBox1.Controls.Add(Me.dtp_fecnac)
@@ -67,37 +75,55 @@ Partial Class frm_alumno
         Me.GroupBox1.Controls.Add(Me.lblDni)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(776, 243)
+        Me.GroupBox1.Size = New System.Drawing.Size(852, 288)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información del Alumno"
         '
+        'lbl_codigo
+        '
+        Me.lbl_codigo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbl_codigo.Location = New System.Drawing.Point(184, 24)
+        Me.lbl_codigo.Name = "lbl_codigo"
+        Me.lbl_codigo.Size = New System.Drawing.Size(135, 35)
+        Me.lbl_codigo.TabIndex = 15
+        Me.lbl_codigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label7
+        '
+        Me.Label7.Location = New System.Drawing.Point(39, 21)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(127, 35)
+        Me.Label7.TabIndex = 14
+        Me.Label7.Text = "Código de Alumno"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'Label6
         '
-        Me.Label6.Location = New System.Drawing.Point(368, 194)
+        Me.Label6.Location = New System.Drawing.Point(25, 252)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(117, 23)
+        Me.Label6.Size = New System.Drawing.Size(135, 23)
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Semestre Ingreso"
         '
         'cbo_semestre
         '
         Me.cbo_semestre.FormattingEnabled = True
-        Me.cbo_semestre.Location = New System.Drawing.Point(491, 193)
+        Me.cbo_semestre.Location = New System.Drawing.Point(166, 249)
         Me.cbo_semestre.Name = "cbo_semestre"
-        Me.cbo_semestre.Size = New System.Drawing.Size(260, 24)
+        Me.cbo_semestre.Size = New System.Drawing.Size(205, 24)
         Me.cbo_semestre.TabIndex = 12
         '
         'dtp_fecnac
         '
-        Me.dtp_fecnac.Location = New System.Drawing.Point(491, 143)
+        Me.dtp_fecnac.Location = New System.Drawing.Point(546, 141)
         Me.dtp_fecnac.Name = "dtp_fecnac"
         Me.dtp_fecnac.Size = New System.Drawing.Size(260, 22)
         Me.dtp_fecnac.TabIndex = 11
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(377, 143)
+        Me.Label5.Location = New System.Drawing.Point(377, 146)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(163, 23)
         Me.Label5.TabIndex = 10
@@ -125,28 +151,28 @@ Partial Class frm_alumno
         '
         Me.txt_nombres.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txt_nombres.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.txt_nombres.Location = New System.Drawing.Point(582, 104)
+        Me.txt_nombres.Location = New System.Drawing.Point(599, 104)
         Me.txt_nombres.Name = "txt_nombres"
-        Me.txt_nombres.Size = New System.Drawing.Size(169, 22)
+        Me.txt_nombres.Size = New System.Drawing.Size(215, 22)
         Me.txt_nombres.TabIndex = 7
         '
         'txt_apemat
         '
-        Me.txt_apemat.Location = New System.Drawing.Point(380, 104)
+        Me.txt_apemat.Location = New System.Drawing.Point(307, 104)
         Me.txt_apemat.Name = "txt_apemat"
-        Me.txt_apemat.Size = New System.Drawing.Size(169, 22)
+        Me.txt_apemat.Size = New System.Drawing.Size(245, 22)
         Me.txt_apemat.TabIndex = 6
         '
         'txt_apepat
         '
-        Me.txt_apepat.Location = New System.Drawing.Point(184, 104)
+        Me.txt_apepat.Location = New System.Drawing.Point(28, 104)
         Me.txt_apepat.Name = "txt_apepat"
-        Me.txt_apepat.Size = New System.Drawing.Size(169, 22)
+        Me.txt_apepat.Size = New System.Drawing.Size(242, 22)
         Me.txt_apepat.TabIndex = 5
         '
         'Label3
         '
-        Me.Label3.Location = New System.Drawing.Point(588, 78)
+        Me.Label3.Location = New System.Drawing.Point(596, 78)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(163, 23)
         Me.Label3.TabIndex = 4
@@ -154,7 +180,7 @@ Partial Class frm_alumno
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(377, 78)
+        Me.Label2.Location = New System.Drawing.Point(304, 78)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(163, 23)
         Me.Label2.TabIndex = 3
@@ -162,7 +188,7 @@ Partial Class frm_alumno
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(181, 78)
+        Me.Label1.Location = New System.Drawing.Point(28, 78)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(163, 23)
         Me.Label1.TabIndex = 2
@@ -170,14 +196,14 @@ Partial Class frm_alumno
         '
         'txt_dni
         '
-        Me.txt_dni.Location = New System.Drawing.Point(184, 36)
+        Me.txt_dni.Location = New System.Drawing.Point(503, 30)
         Me.txt_dni.Name = "txt_dni"
         Me.txt_dni.Size = New System.Drawing.Size(169, 22)
         Me.txt_dni.TabIndex = 1
         '
         'lblDni
         '
-        Me.lblDni.Location = New System.Drawing.Point(15, 36)
+        Me.lblDni.Location = New System.Drawing.Point(377, 33)
         Me.lblDni.Name = "lblDni"
         Me.lblDni.Size = New System.Drawing.Size(163, 23)
         Me.lblDni.TabIndex = 0
@@ -185,7 +211,7 @@ Partial Class frm_alumno
         '
         'btn_nuevo
         '
-        Me.btn_nuevo.Location = New System.Drawing.Point(12, 261)
+        Me.btn_nuevo.Location = New System.Drawing.Point(20, 306)
         Me.btn_nuevo.Name = "btn_nuevo"
         Me.btn_nuevo.Size = New System.Drawing.Size(100, 34)
         Me.btn_nuevo.TabIndex = 14
@@ -194,7 +220,7 @@ Partial Class frm_alumno
         '
         'btn_grabar
         '
-        Me.btn_grabar.Location = New System.Drawing.Point(118, 261)
+        Me.btn_grabar.Location = New System.Drawing.Point(126, 306)
         Me.btn_grabar.Name = "btn_grabar"
         Me.btn_grabar.Size = New System.Drawing.Size(100, 34)
         Me.btn_grabar.TabIndex = 15
@@ -203,7 +229,7 @@ Partial Class frm_alumno
         '
         'btn_modificar
         '
-        Me.btn_modificar.Location = New System.Drawing.Point(225, 261)
+        Me.btn_modificar.Location = New System.Drawing.Point(233, 306)
         Me.btn_modificar.Name = "btn_modificar"
         Me.btn_modificar.Size = New System.Drawing.Size(100, 34)
         Me.btn_modificar.TabIndex = 16
@@ -212,7 +238,7 @@ Partial Class frm_alumno
         '
         'btn_eliminar
         '
-        Me.btn_eliminar.Location = New System.Drawing.Point(331, 261)
+        Me.btn_eliminar.Location = New System.Drawing.Point(339, 306)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(85, 34)
         Me.btn_eliminar.TabIndex = 17
@@ -221,7 +247,7 @@ Partial Class frm_alumno
         '
         'btn_salir
         '
-        Me.btn_salir.Location = New System.Drawing.Point(688, 261)
+        Me.btn_salir.Location = New System.Drawing.Point(772, 306)
         Me.btn_salir.Name = "btn_salir"
         Me.btn_salir.Size = New System.Drawing.Size(100, 34)
         Me.btn_salir.TabIndex = 18
@@ -230,35 +256,51 @@ Partial Class frm_alumno
         '
         'txt_consulta
         '
-        Me.txt_consulta.Location = New System.Drawing.Point(12, 301)
+        Me.txt_consulta.Location = New System.Drawing.Point(14, 346)
         Me.txt_consulta.Name = "txt_consulta"
-        Me.txt_consulta.Size = New System.Drawing.Size(776, 22)
+        Me.txt_consulta.Size = New System.Drawing.Size(852, 22)
         Me.txt_consulta.TabIndex = 14
         '
         'dgv_alumnos
         '
         Me.dgv_alumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_alumnos.Location = New System.Drawing.Point(12, 329)
+        Me.dgv_alumnos.Location = New System.Drawing.Point(14, 374)
         Me.dgv_alumnos.Name = "dgv_alumnos"
         Me.dgv_alumnos.RowHeadersWidth = 51
         Me.dgv_alumnos.RowTemplate.Height = 24
-        Me.dgv_alumnos.Size = New System.Drawing.Size(776, 178)
+        Me.dgv_alumnos.Size = New System.Drawing.Size(852, 208)
         Me.dgv_alumnos.TabIndex = 19
         '
         'btn_cancelar
         '
-        Me.btn_cancelar.Location = New System.Drawing.Point(566, 261)
+        Me.btn_cancelar.Location = New System.Drawing.Point(651, 306)
         Me.btn_cancelar.Name = "btn_cancelar"
         Me.btn_cancelar.Size = New System.Drawing.Size(100, 34)
         Me.btn_cancelar.TabIndex = 20
         Me.btn_cancelar.Text = "Cancelar"
         Me.btn_cancelar.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.Location = New System.Drawing.Point(25, 196)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(166, 23)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Escuela"
+        '
+        'cbo_escuela
+        '
+        Me.cbo_escuela.FormattingEnabled = True
+        Me.cbo_escuela.Location = New System.Drawing.Point(166, 193)
+        Me.cbo_escuela.Name = "cbo_escuela"
+        Me.cbo_escuela.Size = New System.Drawing.Size(648, 24)
+        Me.cbo_escuela.TabIndex = 17
+        '
         'frm_alumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 519)
+        Me.ClientSize = New System.Drawing.Size(878, 594)
         Me.Controls.Add(Me.btn_cancelar)
         Me.Controls.Add(Me.dgv_alumnos)
         Me.Controls.Add(Me.txt_consulta)
@@ -301,4 +343,8 @@ Partial Class frm_alumno
     Friend WithEvents txt_consulta As TextBox
     Friend WithEvents dgv_alumnos As DataGridView
     Friend WithEvents btn_cancelar As Button
+    Friend WithEvents lbl_codigo As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents cbo_escuela As ComboBox
+    Friend WithEvents Label8 As Label
 End Class

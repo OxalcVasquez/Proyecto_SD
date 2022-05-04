@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{27628E73-C409-47F4-AE16-6C8C35A63977}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Proyecto_Presentacion.frm_actividad</StartupObject>
+    <StartupObject>Proyecto_Presentacion.frm_alumno</StartupObject>
     <RootNamespace>Proyecto_Presentacion</RootNamespace>
     <AssemblyName>Proyecto_Presentacion</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -73,11 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="frm_alumno.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frm_alumno.Designer.vb">
+      <DependentUpon>frm_alumno.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_semestre.Designer.vb">
@@ -128,8 +128,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frm_alumno.resx">
+      <DependentUpon>frm_alumno.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_semestre.resx">
       <DependentUpon>frm_semestre.vb</DependentUpon>

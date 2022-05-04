@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidad_actividad.vb" />
+    <Compile Include="Entidad_alumno.vb" />
     <Compile Include="Entidad_escuela.vb" />
     <Compile Include="Entidad_evento.vb" />
     <Compile Include="Entidad_facultad.vb" />

@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actividad.vb" />
+    <Compile Include="Alumno.vb" />
     <Compile Include="Escuela.vb" />
     <Compile Include="Evento.vb" />
     <Compile Include="Facultad.vb" />

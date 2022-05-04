@@ -41,5 +41,19 @@ Public Class Escuela
         Return objconexion.consultaSQL(sql)
     End Function
 
+    Public Function listar_escuela(ByVal codigo As Integer) As Entidad_escuela
+        Dim sql As String
+        sql = "select * from escuela where escuela_id=" & codigo
+        Dim dt As DataTable
+        dt = objconexion.consultaSQL(sql)
+        Dim fila As DataRow
+        fila = dt.Rows(0) 'dt.Rows(dt.Rows.Count - 1)
+        Dim obj_e_escuela As New Entidad_escuela
+        obj_e_escuela.p_escuela_id = fila("escuela_id")
+        obj_e_escuela.p_nombre_escuela = fila("nombre_escuela")
+        obj_e_escuela.p_facultad_id = fila("facultad_id")
 
+
+        Return obj_e_escuela
+    End Function
 End Class
