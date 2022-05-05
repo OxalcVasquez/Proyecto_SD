@@ -113,6 +113,8 @@ Public Class frm_alumno
 
     Private Sub btn_modificar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
         bandera = False
+        btn_nuevo.Enabled = False
+        btn_grabar.Enabled = True
     End Sub
 
     Public Sub refrescar_grilla()
@@ -207,6 +209,6 @@ Public Class frm_alumno
     End Sub
 
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
-
+        Me.Hide()
     End Sub
 End Class

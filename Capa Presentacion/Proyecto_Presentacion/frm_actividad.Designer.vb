@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_actividad
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class frm_actividad
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.dgv_actividades = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txt_tipo = New System.Windows.Forms.TextBox()
         Me.lbl_codigo = New System.Windows.Forms.Label()
         Me.dth_fin = New System.Windows.Forms.DateTimePicker()
         Me.dth_inicio = New System.Windows.Forms.DateTimePicker()
@@ -38,7 +37,7 @@ Partial Class frm_actividad
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cbo_evento = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbo_tipo = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_nombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -64,7 +63,6 @@ Partial Class frm_actividad
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.txt_tipo)
         Me.GroupBox1.Controls.Add(Me.lbl_codigo)
         Me.GroupBox1.Controls.Add(Me.dth_fin)
         Me.GroupBox1.Controls.Add(Me.dth_inicio)
@@ -78,7 +76,7 @@ Partial Class frm_actividad
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.cbo_evento)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.cbo_tipo)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txt_nombre)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -89,13 +87,6 @@ Partial Class frm_actividad
         Me.GroupBox1.TabIndex = 32
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información Actividad"
-        '
-        'txt_tipo
-        '
-        Me.txt_tipo.Location = New System.Drawing.Point(145, 133)
-        Me.txt_tipo.Name = "txt_tipo"
-        Me.txt_tipo.Size = New System.Drawing.Size(235, 22)
-        Me.txt_tipo.TabIndex = 21
         '
         'lbl_codigo
         '
@@ -206,13 +197,13 @@ Partial Class frm_actividad
         Me.cbo_evento.Size = New System.Drawing.Size(232, 24)
         Me.cbo_evento.TabIndex = 7
         '
-        'ComboBox1
+        'cbo_tipo
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(145, 103)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(235, 24)
-        Me.ComboBox1.TabIndex = 6
+        Me.cbo_tipo.FormattingEnabled = True
+        Me.cbo_tipo.Location = New System.Drawing.Point(145, 124)
+        Me.cbo_tipo.Name = "cbo_tipo"
+        Me.cbo_tipo.Size = New System.Drawing.Size(235, 24)
+        Me.cbo_tipo.TabIndex = 6
         '
         'Label3
         '
@@ -330,8 +321,7 @@ Partial Class frm_actividad
     Friend WithEvents chl_costo As CheckBox
     Friend WithEvents dth_fin As DateTimePicker
     Friend WithEvents lbl_codigo As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents txt_tipo As TextBox
+    Friend WithEvents cbo_tipo As ComboBox
     Friend WithEvents btn_salir As Button
     Friend WithEvents btn_modificar As Button
     Friend WithEvents btn_eliminar As Button

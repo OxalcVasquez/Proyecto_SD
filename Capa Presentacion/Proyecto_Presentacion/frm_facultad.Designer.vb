@@ -140,7 +140,7 @@ Partial Class frm_facultad
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frm_facultad"
-        Me.Text = "frm_facultad"
+        Me.Text = "Mantenimiento Facultad"
         CType(Me.dgv_facultades, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

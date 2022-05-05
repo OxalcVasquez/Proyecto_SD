@@ -161,7 +161,7 @@ Partial Class frm_escuela
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frm_escuela"
-        Me.Text = "frm_escuela"
+        Me.Text = "Mantenimiento Escuela"
         CType(Me.dgv_escuelas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

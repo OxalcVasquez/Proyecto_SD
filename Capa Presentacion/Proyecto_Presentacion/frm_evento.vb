@@ -22,7 +22,7 @@ Public Class frm_evento
             .Columns(1).HeaderText = "Nombre de evento"
             .Columns(2).Width = 200
             .Columns(2).HeaderText = "Tipo de evento"
-            .Columns(3).Width = 50
+            .Columns(3).Width = 200
             .Columns(3).HeaderText = "Semestre"
             .ReadOnly = True
             .RowHeadersVisible = False
@@ -44,12 +44,30 @@ Public Class frm_evento
     End Sub
 
     Public Sub llenar_cbo_tipo()
-        cbo_tipo_evento.Items.Add("C")
-        cbo_tipo_evento.Items.Add("E")
-        cbo_tipo_evento.DropDownStyle = ComboBoxStyle.DropDownList
+        Dim dt As DataTable = New DataTable("Tabla")
 
+        dt.Columns.Add("Valor")
+        dt.Columns.Add("Descripcion")
 
+        Dim dr As DataRow
+
+        dr = dt.NewRow()
+        dr("Valor") = "C"
+        dr("Descripcion") = "Congreso"
+        dt.Rows.Add(dr)
+
+        dr = dt.NewRow()
+        dr("Valor") = "A"
+        dr("Descripcion") = "Aniversario"
+        dt.Rows.Add(dr)
+
+        cbo_tipo.DataSource = dt
+        cbo_tipo.ValueMember = "Valor"
+        cbo_tipo.DisplayMember = "Descripcion"
+        cbo_tipo.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
+
+
 
     Private Sub btn_agregar_Click(sender As Object, e As EventArgs) Handles btn_agregar.Click
         bandera = True
@@ -62,9 +80,7 @@ Public Class frm_evento
     Private Sub btn_grabar_Click(sender As Object, e As EventArgs) Handles btn_grabar.Click
         Try
             obj_e_evento.p_nombre_evento = txt_nombre.Text
-            'obj_e_evento.p_tipo_evento = cbo_tipo_evento.SelectedValue.ToString
-            obj_e_evento.p_tipo_evento = txt_tipo_evento.Text
-
+            obj_e_evento.p_tipo_evento = cbo_tipo.SelectedValue
             obj_e_evento.p_semestre_id = cbo_semestre.SelectedValue
             If bandera Then
                 'Insertar
@@ -102,11 +118,22 @@ Public Class frm_evento
         Try
             lbl_codigo.Text = Me.dgv_eventos.CurrentRow.Cells(0).Value
             txt_nombre.Text = Me.dgv_eventos.CurrentRow.Cells(1).Value
-            txt_tipo_evento.Text = Me.dgv_eventos.CurrentRow.Cells(2).Value
+            Dim tipo As String
+            If Me.dgv_eventos.CurrentRow.Cells(2).Value.Equals("C") Then
+                tipo = "Congreso"
+            Else
+                tipo = "Aniversario"
+
+            End If
+            cbo_tipo.Text = tipo
             cbo_semestre.Text = Me.dgv_eventos.CurrentRow.Cells(3).Value
 
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
+        Me.Hide()
     End Sub
 End Class

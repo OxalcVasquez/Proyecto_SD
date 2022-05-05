@@ -8,6 +8,7 @@ Public Class frm_actividad
     Private Sub frm_actividad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         refrescar_grilla()
         llenar_cbo_evento()
+        llenar_cbo_tipo()
     End Sub
 
     Public Sub refrescar_grilla()
@@ -51,12 +52,43 @@ Public Class frm_actividad
         End With
     End Sub
 
+    Public Sub llenar_cbo_tipo()
+        Dim dt As DataTable = New DataTable("Tabla")
+
+        dt.Columns.Add("Valor")
+        dt.Columns.Add("Descripcion")
+
+        Dim dr As DataRow
+
+        dr = dt.NewRow()
+        dr("Valor") = "C"
+        dr("Descripcion") = "Conferencia"
+        dt.Rows.Add(dr)
+
+        dr = dt.NewRow()
+        dr("Valor") = "E"
+        dr("Descripcion") = "Encuentro"
+        dt.Rows.Add(dr)
+
+        cbo_tipo.DataSource = dt
+        cbo_tipo.ValueMember = "Valor"
+        cbo_tipo.DisplayMember = "Descripcion"
+        cbo_tipo.DropDownStyle = ComboBoxStyle.DropDownList
+    End Sub
+
     Private Sub dgv_actividades_SelectionChanged(sender As Object, e As EventArgs) Handles dgv_actividades.SelectionChanged
         Try
             Dim obj_evento As New Evento
             Dim v_cod_eve As Integer
             lbl_codigo.Text = Me.dgv_actividades.CurrentRow.Cells(0).Value
-            txt_tipo.Text = Me.dgv_actividades.CurrentRow.Cells(1).Value
+            Dim tipo As String
+            If Me.dgv_actividades.CurrentRow.Cells(1).Value.Equals("E") Then
+                tipo = "Encuentro"
+            Else
+                tipo = "Conferencia"
+
+            End If
+            cbo_tipo.Text = tipo
             txt_nombre.Text = Me.dgv_actividades.CurrentRow.Cells(2).Value
             txt_descripcion.Text = Me.dgv_actividades.CurrentRow.Cells(3).Value
             dtp_fecha.Value = Me.dgv_actividades.CurrentRow.Cells(4).Value
@@ -82,7 +114,7 @@ Public Class frm_actividad
     Private Sub btn_grabar_Click(sender As Object, e As EventArgs) Handles btn_grabar.Click
         Try
             obj_e_actividad.p_nombre = txt_nombre.Text
-            obj_e_actividad.p_tipo = txt_tipo.Text
+            obj_e_actividad.p_tipo = cbo_tipo.SelectedValue
             obj_e_actividad.p_descripcion = txt_descripcion.Text
             obj_e_actividad.p_fecha = dtp_fecha.Value
             obj_e_actividad.p_h_inicio = dth_inicio.Value
@@ -122,5 +154,21 @@ Public Class frm_actividad
 
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbo_tipo.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub chl_costo_CheckedChanged(sender As Object, e As EventArgs) Handles chl_costo.CheckedChanged
+        If Me.chl_costo.Checked = True Then
+            chl_costo.Text = "Si"
+        Else
+            chl_costo.Text = "No"
+        End If
+    End Sub
+
+    Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
+        Me.Hide()
     End Sub
 End Class

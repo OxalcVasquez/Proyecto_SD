@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frm_evento
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,13 @@ Partial Class frm_evento
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lbl_codigo = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cbo_semestre = New System.Windows.Forms.ComboBox()
-        Me.cbo_tipo_evento = New System.Windows.Forms.ComboBox()
+        Me.cbo_tipo = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txt_nombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -37,18 +37,16 @@ Partial Class frm_evento
         Me.btn_eliminar = New System.Windows.Forms.Button()
         Me.btn_grabar = New System.Windows.Forms.Button()
         Me.btn_agregar = New System.Windows.Forms.Button()
-        Me.txt_tipo_evento = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgv_eventos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.txt_tipo_evento)
         Me.GroupBox1.Controls.Add(Me.lbl_codigo)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.cbo_semestre)
-        Me.GroupBox1.Controls.Add(Me.cbo_tipo_evento)
+        Me.GroupBox1.Controls.Add(Me.cbo_tipo)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txt_nombre)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -85,13 +83,13 @@ Partial Class frm_evento
         Me.cbo_semestre.Size = New System.Drawing.Size(180, 24)
         Me.cbo_semestre.TabIndex = 7
         '
-        'cbo_tipo_evento
+        'cbo_tipo
         '
-        Me.cbo_tipo_evento.FormattingEnabled = True
-        Me.cbo_tipo_evento.Location = New System.Drawing.Point(146, 124)
-        Me.cbo_tipo_evento.Name = "cbo_tipo_evento"
-        Me.cbo_tipo_evento.Size = New System.Drawing.Size(180, 24)
-        Me.cbo_tipo_evento.TabIndex = 6
+        Me.cbo_tipo.FormattingEnabled = True
+        Me.cbo_tipo.Location = New System.Drawing.Point(146, 100)
+        Me.cbo_tipo.Name = "cbo_tipo"
+        Me.cbo_tipo.Size = New System.Drawing.Size(180, 24)
+        Me.cbo_tipo.TabIndex = 6
         '
         'Label3
         '
@@ -179,13 +177,6 @@ Partial Class frm_evento
         Me.btn_agregar.Text = "Agregar"
         Me.btn_agregar.UseVisualStyleBackColor = True
         '
-        'txt_tipo_evento
-        '
-        Me.txt_tipo_evento.Location = New System.Drawing.Point(146, 97)
-        Me.txt_tipo_evento.Name = "txt_tipo_evento"
-        Me.txt_tipo_evento.Size = New System.Drawing.Size(100, 22)
-        Me.txt_tipo_evento.TabIndex = 10
-        '
         'frm_evento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -212,7 +203,7 @@ Partial Class frm_evento
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents cbo_semestre As ComboBox
-    Friend WithEvents cbo_tipo_evento As ComboBox
+    Friend WithEvents cbo_tipo As ComboBox
     Friend WithEvents dgv_eventos As DataGridView
     Friend WithEvents Label4 As Label
     Friend WithEvents btn_salir As Button
@@ -221,5 +212,4 @@ Partial Class frm_evento
     Friend WithEvents btn_grabar As Button
     Friend WithEvents btn_agregar As Button
     Friend WithEvents lbl_codigo As Label
-    Friend WithEvents txt_tipo_evento As TextBox
 End Class
