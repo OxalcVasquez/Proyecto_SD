@@ -23,6 +23,7 @@ Partial Class frm_alumno
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dtp_fecnac = New System.Windows.Forms.DateTimePicker()
         Me.cbo_escuela = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.lbl_codigo = New System.Windows.Forms.Label()
@@ -48,7 +49,6 @@ Partial Class frm_alumno
         Me.txt_consulta = New System.Windows.Forms.TextBox()
         Me.dgv_alumnos = New System.Windows.Forms.DataGridView()
         Me.btn_cancelar = New System.Windows.Forms.Button()
-        Me.dtp_fecnac = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgv_alumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -79,6 +79,13 @@ Partial Class frm_alumno
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Información del Alumno"
+        '
+        'dtp_fecnac
+        '
+        Me.dtp_fecnac.Location = New System.Drawing.Point(441, 193)
+        Me.dtp_fecnac.Name = "dtp_fecnac"
+        Me.dtp_fecnac.Size = New System.Drawing.Size(235, 22)
+        Me.dtp_fecnac.TabIndex = 18
         '
         'cbo_escuela
         '
@@ -288,13 +295,6 @@ Partial Class frm_alumno
         Me.btn_cancelar.TabIndex = 20
         Me.btn_cancelar.Text = "Cancelar"
         Me.btn_cancelar.UseVisualStyleBackColor = True
-        '
-        'dtp_fecnac
-        '
-        Me.dtp_fecnac.Location = New System.Drawing.Point(441, 193)
-        Me.dtp_fecnac.Name = "dtp_fecnac"
-        Me.dtp_fecnac.Size = New System.Drawing.Size(235, 22)
-        Me.dtp_fecnac.TabIndex = 18
         '
         'frm_alumno
         '

@@ -42,4 +42,10 @@ Public Class Actividad
         Return objconexion.consultaSQL(sql)
     End Function
 
+    Public Function listar_actividades_evento(ByVal even_id As Integer) As DataTable
+        Dim sql As String
+        sql = "select * from Actividad where evento_id=" & even_id
+        Return objconexion.consultaSQL(sql)
+    End Function
+
 End Class

@@ -24,4 +24,8 @@ Public Class MDIParent1
     Private Sub RegistroEventoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroEventoToolStripMenuItem.Click
         frm_evento.Show()
     End Sub
+
+    Private Sub InscripcionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InscripcionToolStripMenuItem.Click
+        frm_inscripcion.Show()
+    End Sub
 End Class

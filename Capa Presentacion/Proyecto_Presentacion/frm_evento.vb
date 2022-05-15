@@ -136,4 +136,6 @@ Public Class frm_evento
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
         Me.Hide()
     End Sub
+
+
 End Class

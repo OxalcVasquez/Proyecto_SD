@@ -2,8 +2,6 @@
 Imports Proyecto_Entidades
 Public Class frm_semestre
     Dim bandera As Boolean
-    Dim obj_e_semestre As New Entidad_semestre
-    Dim obj_semestre As New Semestre
     Private Sub frm_semestre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         refrescar_grilla()
     End Sub
@@ -40,19 +38,20 @@ Public Class frm_semestre
 
     Private Sub btn_grabar_Click(sender As Object, e As EventArgs) Handles btn_grabar.Click
         Try
+            Dim obj_semestre As New Semestre
+            Dim obj_e_semestre As New Entidad_semestre
             obj_e_semestre.p_semestre_id = txt_semestre.Text
             obj_e_semestre.p_f_inicio = dtp_inicio.Value
             obj_e_semestre.p_f_fin = dtp_fin.Value
             obj_e_semestre.p_estado = chk_estado.Checked
             If bandera Then
                 'Insertar
-                obj_semestre.insertar_semestre(obj_e_semestre)
+                MsgBox(obj_semestre.insertar_semestre(obj_e_semestre))
+
             Else
                 'Modificar
-                obj_semestre.modificar_semestre(obj_e_semestre)
-
+                MsgBox(obj_semestre.modificar_semestre(obj_e_semestre))
             End If
-            MsgBox("Actualización exitosa")
             refrescar_grilla()
         Catch ex As Exception
 
@@ -61,6 +60,7 @@ Public Class frm_semestre
 
     Private Sub btn_agregar_Click(sender As Object, e As EventArgs) Handles btn_agregar.Click
         bandera = True
+
     End Sub
 
     Private Sub btn_modificar_Click(sender As Object, e As EventArgs) Handles btn_modificar.Click
@@ -69,6 +69,7 @@ Public Class frm_semestre
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         Try
+            Dim obj_semestre As New Semestre
             Dim v_semestre_id As String
             v_semestre_id = txt_semestre.Text
             obj_semestre.eliminar_semestre(v_semestre_id)
@@ -82,5 +83,9 @@ Public Class frm_semestre
 
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
         Me.Hide()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

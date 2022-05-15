@@ -4,12 +4,9 @@ Imports Proyecto_Entidades
 Public Class frm_escuela
 
     Dim bandera As Boolean
-    Dim obj_e_escuela As New Entidad_escuela
-    Dim obj_escuela As New Escuela
 
 
     Private Sub frm_escuela_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        refrescar_grilla()
         llenar_cbo_facultad()
 
     End Sub
@@ -68,6 +65,8 @@ Public Class frm_escuela
 
     Private Sub btn_grabar_Click(sender As Object, e As EventArgs) Handles btn_grabar.Click
         Try
+            Dim obj_escuela As New Escuela
+            Dim obj_e_escuela As New Entidad_escuela
             obj_e_escuela.p_nombre_escuela = txt_nombre.Text
             obj_e_escuela.p_facultad_id = cbo_facultad.SelectedValue
             If bandera Then
@@ -89,7 +88,7 @@ Public Class frm_escuela
 
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         Try
-
+            Dim obj_escuela As New Escuela
             Dim v_escuela_id As Integer
             v_escuela_id = lbl_codigo.Text
             obj_escuela.eliminar_escuela(v_escuela_id)
@@ -102,6 +101,11 @@ Public Class frm_escuela
     End Sub
 
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
-        Me.Hide()
+        Me.Dispose()
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
 End Class

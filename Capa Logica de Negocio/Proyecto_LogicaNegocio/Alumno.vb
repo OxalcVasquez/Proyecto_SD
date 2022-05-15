@@ -42,5 +42,32 @@ Public Class Alumno
         Return objconexion.consultaSQL(sql)
     End Function
 
+    Public Function listar_alumnos_cadena(ByVal cadena As String) As DataTable
+        Dim sql As String
+        sql = "select * from alumno where nombres like '" & cadena & "%' or ape_paterno like '" & cadena & "%'or ape_materno like '" & cadena & "%';"
+        Return objconexion.consultaSQL(sql)
+    End Function
 
+    Public Function listar_alumnos_dni(ByVal dni As String) As Entidad_alumno
+        Dim sql As String
+        sql = "select * from alumno where dni='" & dni & "';"
+        Dim dt As DataTable
+        dt = objconexion.consultaSQL(sql)
+        Dim fila As DataRow
+        Dim obj_e_alumno As New Entidad_alumno
+
+        If dt.Rows.Count > 0 Then
+            fila = dt.Rows(0) 'dt.Rows(dt.Rows.Count - 1)
+            obj_e_alumno.p_alumno_id = fila("alumno_id")
+            obj_e_alumno.p_ape_paterno = fila("ape_paterno")
+            obj_e_alumno.p_ape_materno = fila("ape_materno")
+            obj_e_alumno.p_nombres = fila("nombres")
+            obj_e_alumno.p_sexo = fila("sexo")
+            obj_e_alumno.p_fecha_nacimiento = fila("fecha_nacimiento")
+            obj_e_alumno.p_semestre_ingreso = fila("semestre_ingreso")
+            obj_e_alumno.p_dni = fila("dni")
+            obj_e_alumno.p_escuela_id = fila("escuela_id")
+        End If
+        Return obj_e_alumno
+    End Function
 End Class

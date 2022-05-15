@@ -36,6 +36,8 @@ Partial Class MDIParent1
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.InscribirseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InscripcionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -43,7 +45,7 @@ Partial Class MDIParent1
         'MenuStrip
         '
         Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowsMenu, Me.EventosYActividadToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WindowsMenu, Me.EventosYActividadToolStripMenuItem, Me.InscribirseToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -61,25 +63,25 @@ Partial Class MDIParent1
         'NewWindowToolStripMenuItem
         '
         Me.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem"
-        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
         Me.NewWindowToolStripMenuItem.Text = "Gestión Alumnos"
         '
         'EscuelasToolStripMenuItem
         '
         Me.EscuelasToolStripMenuItem.Name = "EscuelasToolStripMenuItem"
-        Me.EscuelasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.EscuelasToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
         Me.EscuelasToolStripMenuItem.Text = "Gestión Escuelas"
         '
         'GestiónFacultadesToolStripMenuItem
         '
         Me.GestiónFacultadesToolStripMenuItem.Name = "GestiónFacultadesToolStripMenuItem"
-        Me.GestiónFacultadesToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.GestiónFacultadesToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
         Me.GestiónFacultadesToolStripMenuItem.Text = "Gestión Facultades"
         '
         'GestiónSemestreToolStripMenuItem
         '
         Me.GestiónSemestreToolStripMenuItem.Name = "GestiónSemestreToolStripMenuItem"
-        Me.GestiónSemestreToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.GestiónSemestreToolStripMenuItem.Size = New System.Drawing.Size(215, 26)
         Me.GestiónSemestreToolStripMenuItem.Text = "Gestión Semestre"
         '
         'EventosYActividadToolStripMenuItem
@@ -118,6 +120,19 @@ Partial Class MDIParent1
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(54, 20)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
+        'InscribirseToolStripMenuItem
+        '
+        Me.InscribirseToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InscripcionToolStripMenuItem})
+        Me.InscribirseToolStripMenuItem.Name = "InscribirseToolStripMenuItem"
+        Me.InscribirseToolStripMenuItem.Size = New System.Drawing.Size(89, 24)
+        Me.InscribirseToolStripMenuItem.Text = "Inscribirse"
+        '
+        'InscripcionToolStripMenuItem
+        '
+        Me.InscripcionToolStripMenuItem.Name = "InscripcionToolStripMenuItem"
+        Me.InscripcionToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.InscripcionToolStripMenuItem.Text = "Inscripcion"
+        '
         'MDIParent1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -150,4 +165,6 @@ Partial Class MDIParent1
     Friend WithEvents EventosYActividadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistroActivdadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistroEventoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InscribirseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InscripcionToolStripMenuItem As ToolStripMenuItem
 End Class

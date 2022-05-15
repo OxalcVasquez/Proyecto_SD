@@ -69,6 +69,7 @@
     <Compile Include="Escuela.vb" />
     <Compile Include="Evento.vb" />
     <Compile Include="Facultad.vb" />
+    <Compile Include="Inscripcion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

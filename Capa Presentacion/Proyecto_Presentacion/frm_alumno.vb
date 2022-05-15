@@ -211,4 +211,33 @@ Public Class frm_alumno
     Private Sub btn_salir_Click(sender As Object, e As EventArgs) Handles btn_salir.Click
         Me.Hide()
     End Sub
+
+    Private Sub txt_consulta_TextChanged(sender As Object, e As EventArgs) Handles txt_consulta.TextChanged
+        dgv_alumnos.DataSource = obj_alumno.listar_alumnos_cadena(txt_consulta.Text)
+
+        With dgv_alumnos
+            .Columns(0).Width = 50
+            .Columns(0).HeaderText = "Codigo"
+            .Columns(1).Width = 100
+            .Columns(1).HeaderText = "A. Paterno"
+            .Columns(2).Width = 100
+            .Columns(2).HeaderText = "A. Materno"
+            .Columns(3).Width = 100
+            .Columns(3).HeaderText = "Nombres"
+            .Columns(4).Width = 100
+            .Columns(4).HeaderText = "Sexo"
+            .Columns(5).Width = 100
+            .Columns(5).HeaderText = "F. Nac."
+            .Columns(6).Width = 100
+            .Columns(6).HeaderText = "Sem. Ingreso"
+            .Columns(7).Width = 100
+            .Columns(7).HeaderText = "DNI"
+            .Columns(8).Width = 100
+            .Columns(8).HeaderText = "Escuela ID"
+            .ReadOnly = True
+            .RowHeadersVisible = False
+            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+
+        End With
+    End Sub
 End Class
