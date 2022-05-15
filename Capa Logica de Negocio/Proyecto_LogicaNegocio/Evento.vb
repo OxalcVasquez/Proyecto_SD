@@ -41,6 +41,11 @@ Public Class Evento
         sql = "select * from evento"
         Return objconexion.consultaSQL(sql)
     End Function
+    Public Function listar_eventos_vigentes() As DataTable
+        Dim sql As String
+        sql = "select * from evento e inner join semestre s on e.semestre_id = s.semestre_id where s.estado = 1"
+        Return objconexion.consultaSQL(sql)
+    End Function
 
     Public Function listar_evento(ByVal even_id As Integer) As Entidad_evento
         Dim sql As String

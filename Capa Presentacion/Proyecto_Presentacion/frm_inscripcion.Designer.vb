@@ -42,17 +42,20 @@ Partial Class frm_inscripcion
         Me.dgv_inscripciones = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_dni_consulta = New System.Windows.Forms.TextBox()
+        Me.dgv_detalle = New System.Windows.Forms.DataGridView()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.num_cuotas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_actividades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupbox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgv_inscripciones, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_detalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_eliminar
         '
-        Me.btn_eliminar.Location = New System.Drawing.Point(1314, 705)
+        Me.btn_eliminar.Location = New System.Drawing.Point(986, 389)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(128, 33)
         Me.btn_eliminar.TabIndex = 20
@@ -61,7 +64,7 @@ Partial Class frm_inscripcion
         '
         'btn_grabar
         '
-        Me.btn_grabar.Location = New System.Drawing.Point(1257, 313)
+        Me.btn_grabar.Location = New System.Drawing.Point(1268, 313)
         Me.btn_grabar.Name = "btn_grabar"
         Me.btn_grabar.Size = New System.Drawing.Size(128, 33)
         Me.btn_grabar.TabIndex = 19
@@ -191,7 +194,7 @@ Partial Class frm_inscripcion
         Me.groupbox2.Controls.Add(Me.cbo_eventos)
         Me.groupbox2.Location = New System.Drawing.Point(12, 32)
         Me.groupbox2.Name = "groupbox2"
-        Me.groupbox2.Size = New System.Drawing.Size(1416, 352)
+        Me.groupbox2.Size = New System.Drawing.Size(1430, 352)
         Me.groupbox2.TabIndex = 30
         Me.groupbox2.TabStop = False
         Me.groupbox2.Text = "Datos Inscripción"
@@ -201,19 +204,22 @@ Partial Class frm_inscripcion
         Me.GroupBox3.Controls.Add(Me.dgv_actividades)
         Me.GroupBox3.Location = New System.Drawing.Point(480, 21)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(923, 270)
+        Me.GroupBox3.Size = New System.Drawing.Size(933, 284)
         Me.GroupBox3.TabIndex = 29
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Actividades del Evento"
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.dgv_detalle)
+        Me.GroupBox1.Controls.Add(Me.btn_eliminar)
         Me.GroupBox1.Controls.Add(Me.dgv_inscripciones)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.txt_dni_consulta)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 390)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1416, 288)
+        Me.GroupBox1.Size = New System.Drawing.Size(1437, 445)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Inscripciones Registradas"
@@ -225,7 +231,7 @@ Partial Class frm_inscripcion
         Me.dgv_inscripciones.Name = "dgv_inscripciones"
         Me.dgv_inscripciones.RowHeadersWidth = 51
         Me.dgv_inscripciones.RowTemplate.Height = 24
-        Me.dgv_inscripciones.Size = New System.Drawing.Size(1161, 189)
+        Me.dgv_inscripciones.Size = New System.Drawing.Size(1089, 291)
         Me.dgv_inscripciones.TabIndex = 19
         '
         'Label5
@@ -244,14 +250,32 @@ Partial Class frm_inscripcion
         Me.txt_dni_consulta.Size = New System.Drawing.Size(278, 22)
         Me.txt_dni_consulta.TabIndex = 18
         '
+        'dgv_detalle
+        '
+        Me.dgv_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_detalle.Location = New System.Drawing.Point(1143, 80)
+        Me.dgv_detalle.Name = "dgv_detalle"
+        Me.dgv_detalle.RowHeadersWidth = 51
+        Me.dgv_detalle.RowTemplate.Height = 24
+        Me.dgv_detalle.Size = New System.Drawing.Size(253, 291)
+        Me.dgv_detalle.TabIndex = 20
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(1140, 40)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(117, 16)
+        Me.Label6.TabIndex = 21
+        Me.Label6.Text = "Detalle Inscripción"
+        '
         'frm_inscripcion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1461, 794)
+        Me.ClientSize = New System.Drawing.Size(1461, 858)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.groupbox2)
-        Me.Controls.Add(Me.btn_eliminar)
         Me.Name = "frm_inscripcion"
         Me.Text = "frm_inscripcion"
         CType(Me.num_cuotas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -262,6 +286,7 @@ Partial Class frm_inscripcion
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgv_inscripciones, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_detalle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -285,4 +310,6 @@ Partial Class frm_inscripcion
     Friend WithEvents dgv_inscripciones As DataGridView
     Friend WithEvents Label5 As Label
     Friend WithEvents txt_dni_consulta As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents dgv_detalle As DataGridView
 End Class
