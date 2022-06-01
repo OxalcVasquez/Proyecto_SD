@@ -62,9 +62,9 @@ Public Class Escuela
     '    End Try
     'End Function
 
-    Public Function eliminar_escuela(ByVal esc_id As Integer) As Boolean
+    Public Function eliminar_escuela(ByVal obj_e_escuela As Entidad_escuela) As Boolean
         Try
-            obj_adoescuela.eliminar_escuela_pa(esc_id)
+            obj_adoescuela.eliminar_escuela_pa(obj_e_escuela.p_escuela_id)
             Return True
         Catch ex As Exception
             Return False

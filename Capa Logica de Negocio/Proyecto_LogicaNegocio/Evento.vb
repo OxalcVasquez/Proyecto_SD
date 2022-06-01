@@ -6,7 +6,7 @@ Public Class Evento
     Public Function insertar_evento(ByVal obj_e_evento As Entidad_evento) As Boolean
         Try
             Dim sql As String
-            sql = "insert into evento values((select max(evento_id) + 1 from evento),'" & obj_e_evento.p_nombre_evento & "','" & obj_e_evento.p_tipo_evento & "','" & obj_e_evento.p_semestre_id & "')"
+            sql = "insert into evento(nombre_evento,tipo_evento,semestre_id) values((select max(evento_id) + 1 from evento),'" & obj_e_evento.p_nombre_evento & "','" & obj_e_evento.p_tipo_evento & "','" & obj_e_evento.p_semestre_id & "')"
             objconexion.actualizarSQL(sql)
             Return True
         Catch ex As Exception

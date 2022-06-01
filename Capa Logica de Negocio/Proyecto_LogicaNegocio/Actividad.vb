@@ -6,7 +6,7 @@ Public Class Actividad
     Public Function insertar_activdad(ByVal obj_e_activdad As Entidad_actividad) As Boolean
         Try
             Dim sql As String
-            sql = "insert into actividad values('" & obj_e_activdad.p_tipo & "','" & obj_e_activdad.p_nombre & "','" & obj_e_activdad.p_descripcion & "','" & obj_e_activdad.p_fecha & "','" & obj_e_activdad.p_h_inicio & "','" & obj_e_activdad.p_h_fin & "','" & obj_e_activdad.p_tiene_costo & "'," & obj_e_activdad.p_evento_id & ")"
+            sql = "insert into actividad values('" & obj_e_activdad.p_tipo & "','" & obj_e_activdad.p_nombre & "','" & obj_e_activdad.p_descripcion & "','" & obj_e_activdad.p_fecha & "','" & obj_e_activdad.p_h_inicio & "','" & obj_e_activdad.p_h_fin & "'," & obj_e_activdad.p_evento_id & ",'" & obj_e_activdad.p_tiene_costo & "')"
             objconexion.actualizarSQL(sql)
             Return True
         Catch ex As Exception
@@ -17,7 +17,7 @@ Public Class Actividad
     Public Function modificar_actividad(ByVal obj_e_activdad As Entidad_actividad) As Boolean
         Try
             Dim sql As String
-            sql = "update actividad set tipo = '" & obj_e_activdad.p_tipo & "', nombre = '" & obj_e_activdad.p_nombre & "' , fecha = '" & obj_e_activdad.p_fecha & "' ,h_inicio  = '" & obj_e_activdad.p_h_inicio & "' ,h_fin = '" & obj_e_activdad.p_h_fin & "' ,tiene_costo  = '" & obj_e_activdad.p_tiene_costo & "' , evento_id = " & obj_e_activdad.p_evento_id & " where actividad_id =" & obj_e_activdad.p_actividad_id
+            sql = "update actividad set tipo = '" & obj_e_activdad.p_tipo & "', nombre = '" & obj_e_activdad.p_nombre & "' , fecha = '" & obj_e_activdad.p_fecha & "' ,h_inicio  = '" & obj_e_activdad.p_h_inicio & "' ,h_fin = '" & obj_e_activdad.p_h_fin & "' ,costo_actividad  = '" & obj_e_activdad.p_tiene_costo & "' , evento_id = " & obj_e_activdad.p_evento_id & " where actividad_id =" & obj_e_activdad.p_actividad_id
             objconexion.actualizarSQL(sql)
             Return True
         Catch ex As Exception

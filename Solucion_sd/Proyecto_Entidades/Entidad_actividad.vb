@@ -7,7 +7,7 @@
     Private fecha As Date
     Private h_inicio As Date
     Private h_fin As Date
-    Private tiene_costo As Boolean
+    Private costo As Double
     Private evento_id As Integer
 
     Public Property p_actividad_id() As Integer
@@ -66,12 +66,12 @@
             h_fin = value
         End Set
     End Property
-    Public Property p_tiene_costo() As Boolean
+    Public Property p_tiene_costo() As Double
         Get
-            Return tiene_costo
+            Return costo
         End Get
-        Set(ByVal value As Boolean)
-            tiene_costo = value
+        Set(ByVal value As Double)
+            costo = value
         End Set
     End Property
     Public Property p_evento_id() As Integer
