@@ -39,18 +39,18 @@ Partial Class frm_inscripcion
         Me.groupbox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.dgv_detalle = New System.Windows.Forms.DataGridView()
         Me.dgv_inscripciones = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_dni_consulta = New System.Windows.Forms.TextBox()
-        Me.dgv_detalle = New System.Windows.Forms.DataGridView()
-        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.num_cuotas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_actividades, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupbox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.dgv_inscripciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_detalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_inscripciones, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btn_eliminar
@@ -224,6 +224,25 @@ Partial Class frm_inscripcion
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Inscripciones Registradas"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(1140, 40)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(117, 16)
+        Me.Label6.TabIndex = 21
+        Me.Label6.Text = "Detalle Inscripción"
+        '
+        'dgv_detalle
+        '
+        Me.dgv_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_detalle.Location = New System.Drawing.Point(1143, 80)
+        Me.dgv_detalle.Name = "dgv_detalle"
+        Me.dgv_detalle.RowHeadersWidth = 51
+        Me.dgv_detalle.RowTemplate.Height = 24
+        Me.dgv_detalle.Size = New System.Drawing.Size(253, 291)
+        Me.dgv_detalle.TabIndex = 20
+        '
         'dgv_inscripciones
         '
         Me.dgv_inscripciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -250,25 +269,6 @@ Partial Class frm_inscripcion
         Me.txt_dni_consulta.Size = New System.Drawing.Size(278, 22)
         Me.txt_dni_consulta.TabIndex = 18
         '
-        'dgv_detalle
-        '
-        Me.dgv_detalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_detalle.Location = New System.Drawing.Point(1143, 80)
-        Me.dgv_detalle.Name = "dgv_detalle"
-        Me.dgv_detalle.RowHeadersWidth = 51
-        Me.dgv_detalle.RowTemplate.Height = 24
-        Me.dgv_detalle.Size = New System.Drawing.Size(253, 291)
-        Me.dgv_detalle.TabIndex = 20
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(1140, 40)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(117, 16)
-        Me.Label6.TabIndex = 21
-        Me.Label6.Text = "Detalle Inscripción"
-        '
         'frm_inscripcion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -285,8 +285,8 @@ Partial Class frm_inscripcion
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.dgv_inscripciones, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgv_detalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_inscripciones, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

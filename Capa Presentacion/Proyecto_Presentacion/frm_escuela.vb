@@ -89,9 +89,12 @@ Public Class frm_escuela
     Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
         Try
             Dim obj_escuela As New Escuela
+            Dim obj_e_escuela As New Entidad_escuela
+
             Dim v_escuela_id As Integer
             v_escuela_id = lbl_codigo.Text
-            obj_escuela.eliminar_escuela(v_escuela_id)
+            obj_e_escuela.p_escuela_id = v_escuela_id
+            obj_escuela.eliminar_escuela(obj_e_escuela)
             MsgBox("Eliminación exitosa")
             refrescar_grilla()
         Catch ex As Exception
